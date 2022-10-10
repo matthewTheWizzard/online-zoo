@@ -1,0 +1,50 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto', Verdana, sans-serif;
+    @include font($size: 1.6rem, $height: 140%);
+    color: $color-text-main;
+}
+
+h1 {
+    @include font($height: 120%, $size: 4.8rem);
+}
+
+h2 {
+    @include font($size: 4.8rem, $height: 120%);
+
+}
+
+h3 {
+    @include font($size: 3.6rem, $height: 130%);
+}
+
+h4 {
+    @include font($size: 2.4rem, $height: 120%);
+}
+
+strong {
+    @include font($size: 1.6rem, $weight:500, $height:140%)
+}
+
+small {
+    @include font($size: 1.5rem, $height: 120%, $weight:300)
+}
+
+.title{
+    @include font($size: 1.9rem, $height: 120%);
+    margin:0;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: $color-white;
+}
+
+p{
+    color: $color-text-main;
+    @include font($size: 1.6rem, $height: 130%);
+}

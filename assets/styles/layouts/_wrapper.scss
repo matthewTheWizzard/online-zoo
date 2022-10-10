@@ -1,0 +1,22 @@
+.wrapper {
+    max-width: $content-width;
+    margin: auto;
+    @include media-tablet{
+        padding: 0 30px;
+    }
+    @include media-mobile{
+        padding: 0 20px;
+    }
+    &_pick-friend{
+        @include media-mobile{
+            padding: 0;
+        }
+        @include media-mobilesmall{
+            padding: 0;
+        }
+        
+    }
+    @include media-mobilesmall{
+        padding: 0 10px;
+    }
+}

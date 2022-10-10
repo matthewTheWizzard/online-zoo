@@ -1,0 +1,185 @@
+.footer{
+    background: #111115;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    height:443px;
+    @include media-mobile{
+        height: 282px;
+        padding-top: 13px;
+    }
+    @include media-mobilesmall{
+        padding-top: 18px;
+        padding-bottom: 0;
+        height: fit-content;
+    }
+}
+
+.footer-3-columns{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    @include media-mobilesmall{
+        flex-direction: column-reverse;
+    }
+    .navigation{
+        margin-bottom: 0;
+        gap: 58px; //48
+        flex: 3;
+        padding-left: 114px;  // 89
+        justify-content: center;
+        @include media-tablet{
+            padding-left: 89px;
+            gap: 48px;
+        }
+        @include media-mobile{
+            padding-left:0px;
+            justify-content: left;
+            gap: 37px;
+        }
+        @include media-mobilesmall{
+            align-self: center;
+            margin-top: 25px;
+            padding: 0 -1px;
+            gap: 30px;
+        }
+    }
+}
+
+.footer__logo{
+    display: flex;
+    justify-content: space-between;
+    color:$color-white;
+    margin-right: 0;
+    @include media-mobilesmall{
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        width: 84px;
+        height: 52px;
+        text-align: center;
+        border: 0.5px solid white;
+        padding: 2px 2px 48px;
+        &::before{
+            @include media-mobilesmall{
+                left: 74.45px;
+                top: -1.36px;
+            }  
+        }
+        @include media-mobilesmall{
+            border: 0;
+            width: 132px;
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.footer-button{
+    margin-top: 44px;
+    margin-bottom: 63px;
+    @include media-mobile{
+        margin-top: -63px;
+        margin-bottom: 81px;
+    }
+    @include media-mobilesmall{
+        margin-top: 46px;
+        margin-bottom: 44px;
+    }
+}
+
+.form{
+    @include media-mobile{
+        display:none;
+    }
+    @include media-tablet{
+        margin-right: 31px;
+    }
+    h4{
+        margin: 0;
+        margin-bottom: 14px;
+    }
+
+}
+
+.email-input{
+    color: white;
+    width: 228px;
+    height: 42px;
+    padding: 10px;
+    border: 0.7px solid $color-orange;
+    background-color: transparent;
+    margin-right: 10px;
+    &::placeholder{
+        color: $color-placeholder;
+    }
+    
+    &:valid{
+        border: 0.7px solid #4B9200;;
+    }
+    &:invalid{
+        border: 0.7px solid #D31414;
+    }
+    &:focus-visible{
+        outline: none;
+    }
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: $color-white;
+    @include media-mobile{
+        display:none;
+    }
+}
+
+.media-icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+    width: 30px;
+    height: 26px;
+    background-position: center;
+    @include media-mobile{
+        width: 27px;
+        margin: 0;
+    }
+    &_facebook{
+        background: url("../../assets/icons/facebook.svg") no-repeat;
+    };
+    &_twitter {
+        background: url("../../assets/icons/twitter.svg") no-repeat;
+    }
+    &_youtube {
+        background: url("../../assets/icons/youtube.svg") no-repeat;
+    }
+    &_instagram {
+        background: url("../../assets/icons/instagram.svg") no-repeat;
+    }
+}
+
+.footer-design{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include media-mobile{
+        font-weight:100;
+    }
+    @include media-mobilesmall{
+        font-size: 15px;
+    }
+}
+
+.mobile-social-media{
+    display: none;
+    @include media-mobile{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    @include media-mobilesmall{
+        flex-direction: row;
+        gap: 29px;
+    }
+}

@@ -1,0 +1,66 @@
+.header-popup__wrapper {
+    transition: all .3s;
+    visibility: hidden;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(169, 169, 169, 0.7);
+    background-size: 100%;
+    z-index: 200;
+    position: fixed;
+}
+
+.header-popup {
+    width: 100%;
+    height: 329px;
+    background-color: white;
+    padding: 10px;
+}
+
+.logo.logo_popup {
+    border: 1px solid #FE9013;
+    width: 65.6px;
+    height: 41.6px;
+    padding: 0;
+    padding-top: 2px;
+    &:before{
+        background: url('../icons/bamboo_popup.svg') no-repeat;
+        top: 19px;
+        left: 8px;
+    }
+    .title {
+        color: #FE9013;
+        font-size: 15.21px;
+        line-height: 18.25px;
+    }
+}
+
+
+.navigation.navigation_popup {
+    z-index: 100;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 15px;
+    margin-top: 30px;
+    li{
+        a{
+            color: #333B41;
+            &:active{
+                color: #FE9013;
+            }
+            &.selected {
+                color: #E47209;
+
+                &:link {
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+.header_show{
+    visibility: visible;
+    top: 0;
+}

@@ -1,0 +1,114 @@
+.watch-online{
+    background: url('../../assets/images/backgrounds/GiantPanda.jpg');
+    background-size: cover;
+    min-height: 470px;
+    padding-bottom: 100px;
+    @include media-tablet {
+        padding-bottom: 47px;
+    }
+    @include media-mobile{
+        min-height: 370px;
+        padding-bottom: 40px;
+    }
+    @include media-mobilesmall{
+        padding: 0;
+        background-size: 120%;
+        background-position: center 33px;
+        min-height: 220px;
+    }
+}
+
+.watch-info__wrapper{
+    position: relative;
+    @include media-tablet{
+        padding-top: 125px;
+    }
+    @include media-mobile{
+        padding-top: 83px;
+    }
+    @include media-mobilesmall{
+        padding-top: 75px;
+    }
+    padding-top: 170px;
+    display: flex;
+    justify-content: end;
+}
+
+.watch-info{
+    position: relative;
+    &::before {
+            content: "";
+            z-index: 4;
+            position: absolute;
+            position: absolute;
+            border-radius: 50%;
+            background-image: $color-btn-main;
+            width: 465px;
+            height: 465px;
+            left: -71px;
+            top: -71px;
+                @include media-tablet {
+                    width: 367px;
+                    height: 367px;
+                    left: -9px;
+                    top: -58px;
+                }
+                @include media-mobile{
+                    width: 237.6px;
+                    height: 237.6px;
+                    left: 8px;
+                    top: -40px;
+                }
+                @include media-mobilesmall{
+                    width: 119.09px;
+                    height: 119.09px;
+                    left: -19px;
+                    top: -19px;
+                }
+        }
+}
+
+.watch__title{
+    position: relative;
+    z-index: 15;
+    margin: 0 0 auto auto;
+    color: white;
+    @include font($size:10.65rem, $weight:700, $height:75%);
+    text-align: center;
+    max-width: 500px;
+    span{
+        color:$color-yellow;
+    }
+    @include media-tablet{
+        @include font($size: 8.5rem, $weight: 700, $height: 75%);
+        max-width: 508px;
+    }
+    @include media-mobile{
+        @include font($size: 54.42px, $weight: 700, $height: 40.81px);
+        max-width: 249.64px;
+    }
+    @include media-mobilesmall{
+        @include font($size: 2.8rem, $weight: 700, $height: 75%);
+        max-width: 128px;
+    }
+}
+
+.watch__button{
+    margin-top: 60px;
+    @include media-tablet{
+        margin-top: 40px;
+    }
+    @include media-mobile{
+        position: relative;
+        margin-top: -9px;
+        left: -301px;
+    }
+    @include media-mobilesmall{
+        position: absolute;
+        margin-top: 0;
+        left: -170px;
+        top: 165px;
+    }
+    display: flex;
+    justify-content: center;
+}

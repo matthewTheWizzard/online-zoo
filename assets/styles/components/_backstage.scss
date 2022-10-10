@@ -1,0 +1,70 @@
+.backstage{
+    padding: 140px 0 130px;
+    @include media-tablet {
+        padding: 109px 0 80px;
+        background:none;
+    }
+    @include media-mobile{
+        padding: 69px 0 30px;
+        background: url('../../assets/images/backstage/flower_foto1.jpg') right top no-repeat;
+        background-size: 20.2% 94%;
+    }
+    background: url('../../assets/images/backstage/flower_foto1.jpg') right no-repeat;
+    background-size: 13.2%;
+}
+
+.backstage-image{
+    max-width: 609px;
+    @include media-tablet {
+        max-width: 455px;
+        height: 408px;
+    }
+    @include media-mobile{
+        display: none;
+    }
+}
+
+.backstage-info{
+    @include media-tablet{
+        margin-top: -8px;
+    }
+    @include media-mobilesmall{
+        margin-top: 37px;
+    }
+    max-width: 465px;
+    h2{
+        margin: 0;
+        @include media-mobile{
+            width: 454px;
+        }
+        @include media-mobilesmall{
+            font-size: 24px;
+            width: 300px;
+            margin-right: 0;
+        }
+    }
+    p{
+        @include media-mobile{
+            width: 495px;
+        }
+        @include media-mobilesmall{
+            width: 300px;
+            margin-top: 9px;
+            line-height: 134%;
+        }
+        margin-top: 20px;
+        line-height: 140%;
+    }
+    h4{
+        margin: 54px 0 34px;
+        @include media-tablet {
+            margin: 52px 0 34px;
+        }
+        @include media-mobile {
+            margin: 29px 0 17px;
+        }
+        @include media-mobilesmall {
+            margin: 20px 0 11px;
+        }
+    }
+}

@@ -1,0 +1,174 @@
+// carousel
+
+.carousel-item {
+    width: 1160px;
+
+    @include media-tablet {
+        width: 940px;
+    }
+
+    @include media-mobile {
+        width: 600px;
+    }
+
+    @include media-mobilesmall {
+        width: 300px;
+    }
+}
+
+.wrapper__carrousel {
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include media-tablet {
+        width: 940px;
+    }
+
+    @include media-mobile {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+    @include media-mobilesmall {
+        margin: 0 auto;
+        width: 300px;
+    }
+}
+
+.carousel {
+    margin: 0 auto;
+    width: 1160px;
+    position: relative;
+
+    @include media-tablet {
+        width: 940px;
+    }
+
+    @include media-mobile {
+        width: 600px;
+    }
+
+    @include media-mobilesmall {
+        width: 300px;
+    }
+}
+
+.carousel-item-left {
+    position: absolute;
+    left: -1191px;
+
+    @include media-tablet {
+        left: -970px;
+    }
+
+    @include media-mobile {
+        left: -630px;
+    }
+
+    @include media-mobilesmall {
+        left: -300px;
+    }
+
+    top: 0;
+}
+
+.carousel-item-right {
+    position: absolute;
+    right: -1191px;
+
+    @include media-tablet {
+        right: -970px;
+    }
+
+    @include media-mobile {
+        right: -630px;
+    }
+
+    @include media-mobilesmall {
+        right: -300px;
+    }
+
+    top: 0;
+}
+
+.carousel-active {
+    position: relative;
+}
+
+@keyframes move-right {
+    from {
+        right: 0px;
+    }
+
+    to {
+        right: -1191px;
+    }
+}
+@keyframes move-left {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: -1191px;
+    }
+}
+@include media-tablet{
+    @keyframes move-right {
+        from {
+            right: 0px;
+        }
+
+        to {
+            right: -970px;
+        }
+    }
+    @keyframes move-left {
+        from {
+            left: 0px;
+        }
+    
+        to {
+            left: -970px;
+        }
+    }
+
+}
+@include media-mobile {
+    @keyframes move-right {
+        from {
+            right: 0px;
+        }
+
+        to {
+            right: -630px;
+        }
+    }
+
+    @keyframes move-left {
+        from {
+            left: 0px;
+        }
+
+        to {
+            left: -630px;
+        }
+    }
+
+}
+
+.transition-right {
+    animation-name: move-right;
+    animation-duration: 1s;
+}
+
+
+
+.transition-left {
+    animation-name: move-left;
+    animation-duration: 1s;
+}
+
+.hidden {
+    display: none;
+}

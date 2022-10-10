@@ -1,0 +1,212 @@
+.testimonials{
+    background: url("../../assets/images/backgrounds/leav_foto.jpg") no-repeat bottom right;
+    background-size: 15%;
+    @include media-tablet{
+        background-size: 22%;
+    }
+    @include media-mobile{
+        padding-bottom: 26px;
+        background-size: 18%;
+    }
+}
+
+.testimonial{
+    margin: auto;
+    max-width: 1160px;
+    @include media-tablet{
+        width: 940px;
+    }
+    @include media-mobile{
+        width: 600px;
+        height: 357px;
+    }
+    @include media-mobilesmall{
+        width: 299px;
+        height: 357px;
+    }
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials__title{
+    margin: 140px auto 47px;
+    width: fit-content;
+    @include media-tablet{
+        margin: 106px auto 31px;
+    }
+    @include media-mobile{
+        margin: 59px auto 31px;
+    }
+    @include media-mobilesmall{
+        font-size: 24px;
+        margin-bottom: 16px;
+        margin-top: 30px;
+    }
+}
+
+.testimonial-card{
+    flex-basis:unset;
+    background: $color-gray-light;
+    padding: 12px;
+    border-radius: 20px;
+    height: 391px;
+    min-width: 268px;
+    border: double 2px rgba(0, 0, 0, 0);
+    background-image: linear-gradient(#f1f3f2, #f1f3f2), linear-gradient(to left,rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 8049%, #eaf7fe 127.9%, #eaf7fe 149.54%, rgba(254, 189, 171, 0.74) 30.06%, rgb(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: $color-testimony;
+    font-weight: 300;
+    @include media-tablet{
+        min-width: 293px;
+    }
+    @include media-mobile{
+        max-height: 109px;
+        width: 600px;
+        height: fit-content;
+        margin-bottom: 15px;
+        overflow: hidden;
+        padding: 10px;
+        cursor: pointer;
+        &_popup {
+                max-width: 267px;
+                min-height: 391px;
+                min-width: 0;
+            }
+    }
+    @include media-mobilesmall{
+        width: 299px;
+        height: 109px;
+        cursor: pointer;
+    }
+}
+
+.profile-icon{
+    display: inline-block;
+    background: url("../icons/user_icon.png") no-repeat;
+    width: 37px;
+    height:37px;
+}
+
+.profile__info{
+    display: inline-block;
+    margin-left: 7px;
+    color: $color-placeholder;
+    margin-bottom: 3px;
+}
+
+.profile__name{
+    color: $color-black;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.range-wrapper{
+    margin-top: 19px;
+    display: flex;
+    justify-content: center;
+    @include media-mobile{
+        display: none;
+    }
+}
+
+.testimonials__button{
+    margin-top: 30px;
+    padding-bottom: 175px;
+    @include media-tablet{
+        margin-top: 47px;
+        padding-bottom: 140px;
+    }
+    @include media-mobile{
+        margin: 24px auto;
+        width: fit-content;
+        padding-bottom: 55px;
+        margin-bottom: 0;
+    }
+    @include media-mobilesmall{
+        margin-top: 16px;
+        padding-bottom: 38px;
+    }
+    .button{
+        @include media-mobile{
+            min-width: 240px;
+        }
+    }
+}
+
+.testimonial__message{
+    text-align: left;
+    white-space: pre-wrap;
+    display: block;
+    width: fit-content;
+    overflow: scroll;
+    height: 309px;
+    @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+}
+
+.testimonials__layout{
+    gap: 28px;
+    right: 1184px;
+    @include media-tablet{
+        right: 1284px;
+    }
+    @include media-mobile{
+        right: 0;
+        width: 600px;
+        gap: 0;
+    }
+    flex-wrap: nowrap;
+    position: relative;
+    transition: all 1.5s;
+    @include media-mobile{
+        flex-direction: column;
+    }
+}
+
+.testimonial-popup__wrapper{
+    transition: all .5s ease-in-out;
+    visibility: hidden;
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    top: 33px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(169, 169, 169, 0.7);
+    &_active{
+        transition: all .5s ease-in-out;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+.testimonial-popup{
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 320px;
+    height: 428px;
+    padding: 20px 36px 17px 17px;
+    background-color: #F5F7F6;
+    &.testimonial-card_popup{
+            max-width: 267px;
+            min-height: 391px;
+    }
+}
+
+.testimonial-popup__logo {
+    position: absolute;
+    background: url('../icons/x_icon.svg') no-repeat;
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    top: 12px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+
+

@@ -1,0 +1,24 @@
+$color-black: #000000;
+$color-btn-main:linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$color-yellow:#FFEE2E;
+$color-bg-grad:linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%),
+linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%),
+linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$color-border-grad:linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$color-gray-light:#F1F3F2;
+$color-frosted-white:rgba(253, 253, 255, 0.52);;
+$color-btn-hover:#E47209;
+$color-btn-active:#4B9200;
+$color-btn-disabled:#767474;
+$color-text-main:#333B41;
+$color-orange:#FE9013;
+$color-social:rgba(196, 196, 196, 0.5);;
+$color-white:#FFFFFF;
+$color-placeholder:#BDBDBD;
+$color-testimony:#767474;
+
+// media
+$content-width: 1160px;
+$tablet-width: 1440px;
+$mobile-big-width: 980px;
+$mobile-small-width: 647px;

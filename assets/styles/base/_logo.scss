@@ -1,0 +1,22 @@
+.logo {
+   
+    display: block;
+    position:relative;
+    width:82px;
+    height:52px;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    padding:3.55px 4.75px;
+    background-color: transparent;
+    &::before{
+        content:"";
+        z-index: index 4;;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 9.45px;
+        top: 23.64px;
+        background:url('/online-zoo/assets/icons/bamboo.svg');
+        background-repeat: no-repeat;
+    }
+}

@@ -1,0 +1,230 @@
+.wrapper__pets{
+    position: relative;
+}
+
+.pets{
+    background: url("../../assets/images/backgrounds/palm_foto.jpg") no-repeat bottom left, url('../../assets/images/backgrounds/strelitzia\ 1.jpg') no-repeat bottom right;
+    background-size: 18%, 23%;
+    padding-top: 44px;
+    @include media-tablet{
+        padding-top:70px;
+        background-size: 14%, 23%;
+    }
+    @include media-mobile{
+        padding-top: 47px;
+        background-size: 20%, 27%;
+    }
+    @include media-mobilesmall{
+        padding-top: 13px;
+    }
+}
+
+.wrapper__carrousel{
+    position:relative;
+}
+
+.pets-card{
+    margin-bottom: 20px;
+    flex-basis: content;
+    border-radius: 5px;
+    border: 1px solid $color-orange;
+    width: 365px;
+    @include media-tablet{
+        height:353px;
+        width: 294px;
+        &:nth-child(1){
+        margin-bottom: 92px;
+        }
+    }
+    @include media-mobile{
+        height: 332px;
+        max-width: 285.24px;
+        flex-basis: 47.5%;
+        &:nth-child(5) {
+            display: none;
+            }
+        &:nth-child(6){
+            display: none;
+        }
+    }
+    @include media-mobilesmall{
+        flex-basis: 95%;
+        &:nth-child(1) {
+                margin-bottom: 21px;
+        }
+    }
+    overflow: hidden;
+    position: relative;
+    img{
+        transition: all 0.3s;
+        display: block;
+        width: 366px;
+        @include media-tablet {
+            width: 294px;
+            }
+        @include media-mobile{
+            width:285.24px
+        }
+        box-shadow: 1 10 10 $color-orange;
+    }
+    &:hover img{
+        z-index: 100;
+        background: black;
+        transform: scale(1.03);
+    }
+    &:hover .pets-wrapper {
+        z-index: 200;
+        transform: translateY(-180px);
+    }
+
+    &:hover::before{
+        content: '';
+        display: block;
+        z-index: 102;
+        background-color: rgba(178, 178, 178, 0.689);
+        width:500px;
+        height: 500px;
+        position: absolute;
+    }
+}
+
+.pets__info{
+    position: relative;
+    padding:7px 0 13px 16px;
+    @include media-tablet{
+        padding: 8px 8px 4px 14px;
+    }
+    @include media-mobile{
+        padding: 5px 8px 6px 11px;
+        strong{
+        font-size: 13px;
+        line-height:18px;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    span{
+        @include media-tablet{
+            width: auto;
+        }
+        @include media-mobile{
+            font-size: 12px;
+            line-height: 12px;
+        }
+        width: 250px;
+        font-weight: 100;
+        list-style: 105%;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+}
+
+.pets-wrapper{
+    align-items: center;
+    position: relative;
+    display: flex;
+    z-index: 5;
+    justify-content: space-between;
+    transition: all .4s;
+}
+
+.pets__arrows{
+    position: absolute;
+    top:400px;
+    left: -80px;
+    display: flex;
+    width:1320px;
+    justify-content: space-between;
+    height: 64px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include media-tablet{
+        height: 94px;
+        width: 295px;
+        left: 50%;
+        top: 368px;
+    }
+    @include media-mobile{
+        height: 61px;
+        width: 154px;
+        left: 50%;
+        top: 343px;
+    }
+    @include media-mobilesmall{
+        display: none;
+    }
+}
+
+.arrow{
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 62px;
+    background: $color-btn-main;
+    border-radius: 50%;
+    &::before{
+        content: '';
+        z-index: 100;
+        position: absolute;
+        background: url('../icons/arrow.svg') no-repeat;
+        background-position: center;
+        width: 62px;
+        height: 62px;
+    }
+    &_right{
+        transform: rotate(180deg);
+    }
+
+    &:hover {
+        background: #E47209;
+    }
+
+    &:active {
+        background: #4B9200;
+    }
+}
+
+.pets-logo{
+    @include media-mobile{
+        width: 31px;
+        height: 27px;
+        background-size: cover;
+    }
+    margin-right: 5px;
+    right: 2px;
+    width: 46px;
+    height: 46px;
+    &_herbivore{
+        @include media-mobile{
+            background-size: cover;
+        }
+        background: url("../../assets/icons/banana-bamboo_icon.png") no-repeat;
+        background-position: center;
+    }
+    &_carnivore{
+        background: url("../../assets/icons/meet-fish_icon.png") no-repeat;
+        background-position: center;
+        @include media-mobile {
+                background-size: cover;
+            }
+    }
+}
+
+.pets__button{
+    padding-top: 55px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    @include media-tablet{
+        padding-top: 65px;
+        padding-bottom: 140px;
+    }
+    @include media-mobile{
+        padding-top: 40px;
+        padding-bottom: 99px;
+    }
+    @include media-mobilesmall{
+        padding-top: 0px;
+        padding-bottom: 59px;
+    }
+}

@@ -1,0 +1,72 @@
+.button{
+    cursor: pointer;
+    padding:16px;
+    min-width:298px; 
+    color:$color-white;
+    background: $color-btn-main;
+    text-align: center;
+    @include font($size: 1.6rem, $weight: 500, $height: 140%);
+    border-radius: 25px;
+    border:none;
+    &:hover {
+            background: #E47209;
+    }
+
+    &:active {
+        background: #4B9200;
+    }
+
+    &:disabled {
+        background: #767474;
+    }
+     &_square{
+         border-radius:5px;
+         padding: 17px 50px;
+     }
+     &_submit{
+         border-radius:5px;
+         border:1px solid $color-text-main;
+         color: $color-black;
+         min-width:129px;
+         padding:10px;
+         background: $color-gray-light;
+         @include font($size: 1.6rem, $weight: 400, $height: 140%);
+         &:hover{
+            background: $color-gray-light;
+         }
+         &:active{
+            border: 2px solid #4B9200;
+            background: $color-gray-light;
+            }
+         &:invalid{
+            border: 2px solid #c32c07;
+            background: $color-gray-light;
+         }
+     }
+    
+}
+
+.link {
+    transition: all 0.3s;
+    color: white;
+    &:hover{
+        color: #E47209;
+    }
+    &_emergency{
+        text-decoration: underline;
+        text-decoration-color: #E47209;
+        color: $color-text-main
+    }
+    &:active{
+        color: #4B9200;
+    }
+}
+
+.selected {
+    color: #E47209;
+    &:link {
+      pointer-events: none; 
+      cursor: default; 
+    }
+}
+
